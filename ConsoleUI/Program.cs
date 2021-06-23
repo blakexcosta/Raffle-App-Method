@@ -9,18 +9,35 @@ namespace ConsoleUI
 {
     class Program
     {
+        private static Dictionary<int, string> guests = new Dictionary<int, string>();
+        private static int min = 1000;
+        private static int max = 9999;
+        private static int raffleNumber;
+        private static Random _rdm = new Random();
+
         static void Main(string[] args)
         {
+            string userInputReturned = GetUserInput("hello");
+            Console.WriteLine(userInputReturned);
 
 
         }
 
         //Start writing your code here
-
-
-
-
-
+        /// <summary>
+        /// Print out a user message, and then return user input
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        private static string GetUserInput(string message)
+        {
+            // pass the message as an argument to print something
+            Console.WriteLine(message);
+            // get user input 
+            string userInput = Console.ReadLine();
+            //  return userInput
+            return userInput;
+        }
 
         static void MultiLineAnimation() // Credit: https://www.michalbialecki.com/2018/05/25/how-to-make-you-console-app-look-cool/
         {
